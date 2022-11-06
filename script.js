@@ -12,18 +12,32 @@ var temperature = document.querySelector('.temp');
 var humidity = document.querySelector('.humidity');
 var windSpeed = document.querySelector('.windSpeed');
 
+var lat = document.querySelector('.displayingLat');
+var long = document.querySelector('.displayingLong');
+
 
 button.addEventListener('click', function(){
 
     fetch('https://api.openweathermap.org/data/2.5/forecast?q='+citySearch.value+'&appid=aafe4f4c88c16dbb6b700eb070949996')
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => 
+        
+        
+        {
+        var displayName = data.city.name;
+        var displayLat = data.city.coord.lat;
+        var displayLong = data.city.coord.lon;
 
-    .catch(err => alert("Make sure your you capatilize the name of your city!"))
+        nameOfCity.innerHTML = displayName;
+        lat.innerHTML = displayLat;
+        long.innerHTML = displayLong;
+    })
+   
+ 
+    .catch(err => console.log("Make sure your you capatilize the name of your city!"))
 
 
 })
-
 
 
 
