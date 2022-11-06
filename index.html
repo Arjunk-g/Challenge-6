@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
-        <link href="https://code.jquery.com/jquery-3.6.0.js"/>
 
-        <link rel="stylesheet" href="">
-        
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        />
-    
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous"
-        />
-    
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-          rel="stylesheet"
-        />
-          
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    
-          
-        <link rel="stylesheet" href="style.css" />
-        
-        <title>Whats The Weather</title>
-      
-    </head>
-    
-    <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-      <header id="heading">
-        <h1>Weather Dashboard</h1>
-        <p>Made by: Arjun Gupta</p> 
-      </header> 
-      
-      
-      <div class="container">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-        <div id="dayCards">
-          <p>This is a card</p>
-        </div>
+  <link href="https://code.jquery.com/jquery-3.6.0.js" />
 
-        <div id="searchBar">
-          <form id="formID">
-            <label>Enter City Here</label><br>
-            <input type="text" id="cityRequested">
-            <button type="submit" onclick="launch()">Search</button>
-            <p id="demo"></p>
-          </form>
-        </div>
+  <link rel="stylesheet" href="">
 
-     </div>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-    <!-- script  -->
-    <script src="script.js"/></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+
+
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Whats The Weather</title>
+
+</head>
+
+<body>
+
+  <header id="heading">
+    <h1>Weather Dashboard</h1>
+    <p>Made by: Arjun Gupta</p>
+  </header>
+
+
+  <div class="container">
+
+    <div class="searchBar">
+      <label>Enter City Here</label><br>
+      <input type="text" class="cityRequested" placeholder="Enter A CITY here">
+      <button type="submit" class="searchButton">Search</button>
+    </div>
+
+    <div class="dayCards">
+      <h1 class="nameOfCity"></h1>
+      <h2 class="date"></h2>
+      <h3 class="icon"></h3>
+      <h4 class="temp"></h4>
+      <h5 class="humidity"></h5>
+      <h6 class="windSpeed"></h6>
+    </div>
+
+  </div>
+
+  <!-- script  -->
+  <script src="script.js" />
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 </body>
+
 </html>
